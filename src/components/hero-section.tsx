@@ -3,8 +3,8 @@
 import { useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import { Youtube, Send, Music } from "lucide-react"
-import Image from "next/image"
 import { gsap } from "gsap"
+import Image from "next/image"
 
 export default function HeroSection() {
   useEffect(() => {
@@ -101,7 +101,7 @@ export default function HeroSection() {
         <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
           {/* Left side - Content */}
           <div className="text-center lg:text-left order-2 lg:order-1">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-6 leading-[70px]">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-bold mb-6 leading-[65px]">
               Welcome to <span className="text-white">Excelet Academy</span>
             </h1>
             <p className="text-lg sm:text-xl md:text-2xl mb-8 lg:mb-12 text-gray-100 max-w-3xl leading-relaxed">
@@ -113,7 +113,7 @@ export default function HeroSection() {
               <Button
                 variant="outline"
                 size="lg"
-                className="bg-white/10 border-white/20 text-white hover:bg-white/20 text-sm sm:text-base"
+                className="bg-white/10 border-white/20 text-white hover:bg-white/20 text-sm sm:text-base cursor-pointer"
               >
                 <Youtube className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
                 YouTube
@@ -121,7 +121,7 @@ export default function HeroSection() {
               <Button
                 variant="outline"
                 size="lg"
-                className="bg-white/10 border-white/20 text-white hover:bg-white/20 text-sm sm:text-base"
+                className="bg-white/10 border-white/20 text-white hover:bg-white/20 text-sm sm:text-base cursor-pointer"
               >
                 <Send className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
                 Telegram
@@ -129,7 +129,7 @@ export default function HeroSection() {
               <Button
                 variant="outline"
                 size="lg"
-                className="bg-white/10 border-white/20 text-white hover:bg-white/20 text-sm sm:text-base"
+                className="bg-white/10 border-white/20 text-white hover:bg-white/20 text-sm sm:text-base cursor-pointer"
               >
                 <Music className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
                 TikTok
@@ -137,32 +137,47 @@ export default function HeroSection() {
             </div>
 
             <div className="flex flex-col sm:flex-row justify-center lg:justify-start items-center space-y-4 sm:space-y-0 sm:space-x-4 lg:space-x-6">
-              <Button
-                size="lg"
-                className="bg-black hover:bg-gray-800 text-white px-6 sm:px-8 py-3 w-full sm:w-auto text-sm sm:text-base"
-              >
-                <Image
-                  src="/google-play-brands.svg"
-                  alt="Google Play"
-                  width={20}
-                  height={20}
-                  className="mr-2"
-                />
-                Get it on Google Play
-              </Button>
-              <Button
-                size="lg"
-                className="bg-black hover:bg-gray-800 text-white px-6 sm:px-8 py-3 w-full sm:w-auto text-sm sm:text-base"
-              >
-                <Image
-                  src="/app-store-brands.svg"
-                  alt="App Store"
-                  width={20}
-                  height={20}
-                  className="mr-2"
-                />
-                Download on App Store
-              </Button>
+              {/* Google Play Button */}
+              <div className="relative group cursor-pointer w-full sm:w-auto">
+                <div className="absolute inset-0 bg-gradient-to-r from-green-400 to-green-600 rounded-lg blur opacity-75 group-hover:opacity-100 transition duration-300"></div>
+                <div className="relative bg-black/80 hover:bg-black border border-white/20 rounded-lg px-6 py-4 transition-all duration-300 group-hover:scale-105 backdrop-blur-sm">
+                  <div className="flex items-center space-x-3">
+                    <div className="flex-shrink-0">
+                      <div className="w-10 h-10 bg-gradient-to-br from-blue-400 via-green-400 to-yellow-400 rounded-lg flex items-center justify-center">
+                        {/* Placeholder for Google Play icon - you can upload your own */}
+                        <div className="w-6 h-6  rounded-sm flex items-center justify-center">
+                        <span className="text-xs font-bold text-gray-800"><Image src="/google-play-brands.svg" alt="App Store" width={'50'} height={'50'}/></span>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="flex-1 text-left">
+                      <div className="text-xs text-gray-300 uppercase tracking-wide">Get it on</div>
+                      <div className="text-lg font-bold text-white leading-tight">Google Play</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* App Store Button */}
+              <div className="relative group cursor-pointer w-full sm:w-auto">
+                <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-blue-600 rounded-lg blur opacity-75 group-hover:opacity-100 transition duration-300"></div>
+                <div className="relative bg-black/80 hover:bg-black border border-white/20 rounded-lg px-6 py-4 transition-all duration-300 group-hover:scale-105 backdrop-blur-sm">
+                  <div className="flex items-center space-x-3">
+                    <div className="flex-shrink-0">
+                      <div className="w-10 h-10 bg-gradient-to-br from-blue-400 to-blue-600 rounded-lg flex items-center justify-center">
+                        {/* Placeholder for Apple icon - you can upload your own */}
+                        <div className="w-6 h-6  rounded-sm flex items-center justify-center">
+                        <span className="text-xs font-bold text-gray-800"><Image src="/app-store-brands.svg" alt="App Store" width={'50'} height={'50'} /></span>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="flex-1 text-left">
+                      <div className="text-xs text-gray-300 uppercase tracking-wide">Download on the</div>
+                      <div className="text-lg font-bold text-white leading-tight">App Store</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
 
