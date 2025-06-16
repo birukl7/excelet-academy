@@ -80,7 +80,7 @@ export default function Footer() {
             <div className="space-y-3">
               <Button size="sm" className="bg-black hover:bg-gray-800 text-white w-full justify-start">
                 <Image
-                  src="/placeholder.svg?height=20&width=20"
+                  src="/google-play-brands.svg"
                   alt="Google Play"
                   width={20}
                   height={20}
@@ -90,7 +90,7 @@ export default function Footer() {
               </Button>
               <Button size="sm" className="bg-black hover:bg-gray-800 text-white w-full justify-start">
                 <Image
-                  src="/placeholder.svg?height=20&width=20"
+                  src="/app-store-brands.svg"
                   alt="App Store"
                   width={20}
                   height={20}

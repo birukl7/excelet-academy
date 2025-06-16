@@ -101,7 +101,7 @@ export default function HeroSection() {
         <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
           {/* Left side - Content */}
           <div className="text-center lg:text-left order-2 lg:order-1">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-6 leading-tight">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-6 leading-[70px]">
               Welcome to <span className="text-white">Excelet Academy</span>
             </h1>
             <p className="text-lg sm:text-xl md:text-2xl mb-8 lg:mb-12 text-gray-100 max-w-3xl leading-relaxed">
@@ -142,7 +142,7 @@ export default function HeroSection() {
                 className="bg-black hover:bg-gray-800 text-white px-6 sm:px-8 py-3 w-full sm:w-auto text-sm sm:text-base"
               >
                 <Image
-                  src="/placeholder.svg?height=20&width=20"
+                  src="/google-play-brands.svg"
                   alt="Google Play"
                   width={20}
                   height={20}
@@ -155,7 +155,7 @@ export default function HeroSection() {
                 className="bg-black hover:bg-gray-800 text-white px-6 sm:px-8 py-3 w-full sm:w-auto text-sm sm:text-base"
               >
                 <Image
-                  src="/placeholder.svg?height=20&width=20"
+                  src="/app-store-brands.svg"
                   alt="App Store"
                   width={20}
                   height={20}

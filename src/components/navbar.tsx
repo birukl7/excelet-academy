@@ -47,10 +47,10 @@ export default function Navbar() {
   }
 
   return (
-    <nav className="bg-white shadow-sm">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          <div className="flex items-center space-x-2">
+          <div className="flex items-center space-x-2 cursor-pointer">
             <div className="w-8 h-8 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg flex items-center justify-center">
               <GraduationCap className="w-5 h-5 text-white" />
             </div>
@@ -65,7 +65,7 @@ export default function Navbar() {
               <button
                 key={item.name}
                 onClick={() => scrollToSection(item.href)}
-                className={`relative px-3 py-2 text-sm font-medium transition-colors hover:text-purple-600 ${
+                className={`relative px-3 py-2 text-sm font-medium transition-colors hover:text-purple-600 cursor-pointer ${
                   activeSection === item.href ? "text-purple-600" : "text-gray-700"
                 }`}
               >
@@ -78,13 +78,13 @@ export default function Navbar() {
           </div>
 
           {/* Desktop Install Button */}
-          <Button className="hidden md:flex bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white">
+          <Button className="hidden md:flex bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white cursor-pointer">
             <Download className="w-4 h-4 mr-2" />
             Install App
           </Button>
 
           {/* Mobile Menu Button */}
-          <button className="md:hidden p-2" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+          <button className="md:hidden p-2 cursor-pointer" onClick={() => setIsMenuOpen(!isMenuOpen)}>
             {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
@@ -97,14 +97,14 @@ export default function Navbar() {
                 <button
                   key={item.name}
                   onClick={() => scrollToSection(item.href)}
-                  className={`text-left px-3 py-2 text-sm font-medium transition-colors hover:text-purple-600 ${
+                  className={`text-left px-3 py-2 text-sm font-medium transition-colors hover:text-purple-600 cursor-pointer ${
                     activeSection === item.href ? "text-purple-600" : "text-gray-700"
                   }`}
                 >
                   {item.name}
                 </button>
               ))}
-              <Button className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white w-full">
+              <Button className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white w-full cursor-pointer">
                 <Download className="w-4 h-4 mr-2" />
                 Install App
               </Button>
