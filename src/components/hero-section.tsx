@@ -2,9 +2,14 @@
 
 import { useEffect } from "react"
 import { Button } from "@/components/ui/button"
-import { Youtube, Send, Music } from "lucide-react"
+import { Youtube, Send } from "lucide-react"
 import { gsap } from "gsap"
 import Image from "next/image"
+
+// Custom TikTok Icon Component
+const TikTokIcon = ({ className }: { className?: string }) => (
+<svg className={className} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="#ffffff" d="M448 209.9a210.1 210.1 0 0 1 -122.8-39.3V349.4A162.6 162.6 0 1 1 185 188.3V278.2a74.6 74.6 0 1 0 52.2 71.2V0l88 0a121.2 121.2 0 0 0 1.9 22.2h0A122.2 122.2 0 0 0 381 102.4a121.4 121.4 0 0 0 67 20.1z"/></svg>
+)
 
 export default function HeroSection() {
   useEffect(() => {
@@ -101,10 +106,10 @@ export default function HeroSection() {
         <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
           {/* Left side - Content */}
           <div className="text-center lg:text-left order-2 lg:order-1">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-bold mb-6 leading-[65px]">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-bold mb-6 leading-[60px]">
               Welcome to <span className="text-white">Excelet Academy</span>
             </h1>
-            <p className="text-lg sm:text-xl md:text-2xl mb-8 lg:mb-12 text-gray-100 max-w-3xl leading-relaxed">
+            <p className="text-lg sm:text-xl md:text-2xl mb-8 lg:mb-12 text-gray-100 max-w-3xl leading-[30px]">
               Your all-in-one learning hub. From school subjects to real-world skills, we help you learn smarter,
               faster, and better.
             </p>
@@ -113,7 +118,7 @@ export default function HeroSection() {
               <Button
                 variant="outline"
                 size="lg"
-                className="bg-white/10 border-white/20 text-white hover:bg-white/20 text-sm sm:text-base cursor-pointer"
+                className="bg-white/10 border-white/20 text-white hover:bg-white/20 text-sm sm:text-base cursor-pointer transition-all duration-300 hover:px-8 hover:text-white"
               >
                 <Youtube className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
                 YouTube
@@ -121,7 +126,7 @@ export default function HeroSection() {
               <Button
                 variant="outline"
                 size="lg"
-                className="bg-white/10 border-white/20 text-white hover:bg-white/20 text-sm sm:text-base cursor-pointer"
+                className="hover:text-white bg-white/10 border-white/20 text-white hover:bg-white/20 text-sm sm:text-base cursor-pointer transition-all duration-300 hover:px-8"
               >
                 <Send className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
                 Telegram
@@ -129,9 +134,9 @@ export default function HeroSection() {
               <Button
                 variant="outline"
                 size="lg"
-                className="bg-white/10 border-white/20 text-white hover:bg-white/20 text-sm sm:text-base cursor-pointer"
+                className="bg-white/10 border-white/20 text-white hover:bg-white/20 text-sm sm:text-base cursor-pointer transition-all duration-300 hover:px-8 hover:text-white"
               >
-                <Music className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
+                <TikTokIcon className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
                 TikTok
               </Button>
             </div>
@@ -143,11 +148,10 @@ export default function HeroSection() {
                 <div className="relative bg-black/80 hover:bg-black border border-white/20 rounded-lg px-6 py-4 transition-all duration-300 group-hover:scale-105 backdrop-blur-sm">
                   <div className="flex items-center space-x-3">
                     <div className="flex-shrink-0">
-                      <div className="w-10 h-10 bg-gradient-to-br from-blue-400 via-green-400 to-yellow-400 rounded-lg flex items-center justify-center">
+                      <div className="w-10 h-10 rounded-lg flex items-center justify-center">
                         {/* Placeholder for Google Play icon - you can upload your own */}
-                        <div className="w-6 h-6  rounded-sm flex items-center justify-center">
-                        <span className="text-xs font-bold text-gray-800"><Image src="/google-play-brands.svg" alt="App Store" width={'50'} height={'50'}/></span>
-                        </div>
+                        <Image alt="google-play-icon" src={"/google-play-brands.svg"} width={'50'} height={'50'}/>
+
                       </div>
                     </div>
                     <div className="flex-1 text-left">
@@ -164,11 +168,9 @@ export default function HeroSection() {
                 <div className="relative bg-black/80 hover:bg-black border border-white/20 rounded-lg px-6 py-4 transition-all duration-300 group-hover:scale-105 backdrop-blur-sm">
                   <div className="flex items-center space-x-3">
                     <div className="flex-shrink-0">
-                      <div className="w-10 h-10 bg-gradient-to-br from-blue-400 to-blue-600 rounded-lg flex items-center justify-center">
-                        {/* Placeholder for Apple icon - you can upload your own */}
-                        <div className="w-6 h-6  rounded-sm flex items-center justify-center">
-                        <span className="text-xs font-bold text-gray-800"><Image src="/app-store-brands.svg" alt="App Store" width={'50'} height={'50'} /></span>
-                        </div>
+                      <div className="w-10 h-10  flex items-center justify-center">
+                      <Image alt="apple-app-store-icon" src={"/app-store-brands.svg"} width={'50'} height={'50'}/>
+
                       </div>
                     </div>
                     <div className="flex-1 text-left">
@@ -182,21 +184,21 @@ export default function HeroSection() {
           </div>
 
           {/* Right side - Animated Graphics */}
-          <div className="relative order-1 lg:order-2 flex justify-center lg:block lg:pl-8">
-            <div className="relative w-80 h-80 sm:w-96 sm:h-96">
-              {/* Main circle */}
-              <div className="main-circle absolute top-0 right-0 w-64 h-64 sm:w-80 sm:h-80 bg-gradient-to-br from-white/20 to-white/5 rounded-full backdrop-blur-sm border border-white/20"></div>
+          <div className="relative order-1 lg:order-2 flex justify-center">
+            <div className="relative w-80 h-80 sm:w-96 sm:h-96 flex items-center justify-center">
+              {/* Main circle - centered */}
+              <div className="main-circle absolute w-64 h-64 sm:w-80 sm:h-80 bg-gradient-to-br from-white/20 to-white/5 rounded-full backdrop-blur-sm border border-white/20"></div>
 
-              {/* Floating elements */}
+              {/* Floating elements - positioned relative to center */}
               <div className="floating-element float-1 absolute top-8 sm:top-12 right-8 sm:right-12 w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-2xl shadow-2xl"></div>
-              <div className="floating-element float-2 absolute top-24 sm:top-32 right-24 sm:right-32 w-8 h-8 sm:w-12 sm:h-12 bg-gradient-to-br from-pink-400 to-purple-500 rounded-full shadow-2xl"></div>
+              <div className="floating-element float-2 absolute top-24 sm:top-32 left-8 sm:left-12 w-8 h-8 sm:w-12 sm:h-12 bg-gradient-to-br from-pink-400 to-purple-500 rounded-full shadow-2xl"></div>
               <div className="floating-element float-3 absolute bottom-16 sm:bottom-20 right-4 sm:right-8 w-14 h-14 sm:w-20 sm:h-20 bg-gradient-to-br from-green-400 to-blue-500 rounded-3xl shadow-2xl"></div>
 
-              {/* Book/Learning icons */}
-              <div className="learning-icon absolute top-16 sm:top-20 right-16 sm:right-20 w-20 h-20 sm:w-24 sm:h-24 bg-white/10 rounded-2xl backdrop-blur-sm border border-white/20 flex items-center justify-center">
+              {/* Book/Learning icons - centered positioning */}
+              <div className="learning-icon absolute top-16 sm:top-20 left-16 sm:left-20 w-20 h-20 sm:w-24 sm:h-24 bg-white/10 rounded-2xl backdrop-blur-sm border border-white/20 flex items-center justify-center">
                 <span className="text-2xl sm:text-3xl">📚</span>
               </div>
-              <div className="learning-icon absolute bottom-24 sm:bottom-32 right-20 sm:right-24 w-16 h-16 sm:w-20 sm:h-20 bg-white/10 rounded-2xl backdrop-blur-sm border border-white/20 flex items-center justify-center">
+              <div className="learning-icon absolute bottom-24 sm:bottom-32 left-20 sm:left-24 w-16 h-16 sm:w-20 sm:h-20 bg-white/10 rounded-2xl backdrop-blur-sm border border-white/20 flex items-center justify-center">
                 <span className="text-xl sm:text-2xl">🎓</span>
               </div>
               <div className="learning-icon absolute top-32 sm:top-40 right-0 sm:right-4 w-14 h-14 sm:w-18 sm:h-18 bg-white/10 rounded-2xl backdrop-blur-sm border border-white/20 flex items-center justify-center">

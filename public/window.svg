@@ -1,1 +1,48 @@
-<svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill-rule="evenodd" clip-rule="evenodd" d="M1.5 2.5h13v10a1 1 0 0 1-1 1h-11a1 1 0 0 1-1-1zM0 1h16v11.5a2.5 2.5 0 0 1-2.5 2.5h-11A2.5 2.5 0 0 1 0 12.5zm3.75 4.5a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5M7 4.75a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0m1.75.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5" fill="#666"/></svg>
+ <svg
+      
+      viewBox="0 0 100 100"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <defs>
+        <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stopColor='#4F46E5' stopOpacity="1" />
+          <stop offset="100%" stopColor='#818CF8' stopOpacity="1" />
+        </linearGradient>
+        <filter id="shadow">
+          <feDropShadow dx="2" dy="2" stdDeviation="3" floodOpacity="0.3" />
+        </filter>
+      </defs>
+      
+      
+      <path
+        d="M20 80 L60 80 L60 70 L30 70 L30 20 L20 20 Z"
+        fill="url(#grad1)"
+        filter="url(#shadow)"
+      />
+      
+      
+      <path
+        d="M25 75 L55 75 L55 65 L35 65 L35 25 L25 25 Z"
+        fill='#4F46E5'
+      />
+      
+      <path
+        d="M27 27 L27 73 L53 73 L53 71 L29 71 L29 27 Z"
+        fill="white"
+        fillOpacity="0.3"
+      />
+      
+      <circle
+        cx="70"
+        cy="30"
+        r="15"
+        fill='#818CF8'
+        filter="url(#shadow)"
+      />
+      <path
+        d="M65 30 L75 30 M70 25 L70 35"
+        stroke="white"
+        strokeWidth="3"
+        strokeLinecap="round"
+      />
+    </svg>
