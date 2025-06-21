@@ -1,7 +1,7 @@
 "use client"
 
 import Link from "next/link"
-import { Youtube, Send } from "lucide-react"
+import {  Youtube, Send } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import Image from "next/image"
 
@@ -29,6 +29,7 @@ const ExceletLogo = ({ className }: { className?: string }) => (
   </svg>
 )
 
+
 export default function Footer() {
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId)
@@ -51,7 +52,8 @@ export default function Footer() {
               faster, and better.
             </p>
             <div className="flex flex-wrap gap-3">
-              <Button
+              <a href="https://www.youtube.com/channel/UCKfy55R9h20uJvEJ5_uyN6Q">
+                <Button
                 variant="outline"
                 size="sm"
                 className="bg-red-600 hover:bg-red-700 border-red-600 hover:border-red-700 text-white transition-all duration-300 hover:scale-105 hover:px-6 hover:text-white cursor-pointer"
@@ -59,22 +61,31 @@ export default function Footer() {
                 <Youtube className="w-4 h-4 mr-2" />
                 YouTube
               </Button>
-              <Button
-                variant="outline"
-                size="sm"
-                className="hover:text-white bg-blue-500 hover:bg-blue-600 border-blue-500 hover:border-blue-600 text-white transition-all duration-300 hover:scale-105 hover:px-6 cursor-pointer"
-              >
-                <Send className="w-4 h-4 mr-2" />
-                Telegram
-              </Button>
-              <Button
-                variant="outline"
-                size="sm"
-                className="bg-black hover:bg-gray-800 border-gray-700 hover:border-gray-600 text-white transition-all duration-300 hover:scale-105 hover:px-6  hover:text-white cursor-pointer"
-              >
-                <TikTokIcon className="w-4 h-4 mr-2" />
-                TikTok
-              </Button>
+              </a>
+
+              <a href="https://t.me/exceletacademy">
+                <Button
+                  variant="outline"
+                  size="sm"
+                  className="hover:text-white bg-blue-500 hover:bg-blue-600 border-blue-500 hover:border-blue-600 text-white transition-all duration-300 hover:scale-105 hover:px-6 cursor-pointer"
+                >
+                  <Send className="w-4 h-4 mr-2" />
+                  Telegram
+                </Button>
+              </a>
+
+
+              <a href="https://www.tiktok.com/@exceletacademy">
+                <Button
+                  variant="outline"
+                  size="sm"
+                  className="bg-black hover:bg-gray-800 border-gray-700 hover:border-gray-600 text-white transition-all duration-300 hover:scale-105 hover:px-6  hover:text-white cursor-pointer"
+                >
+                  <TikTokIcon className="w-4 h-4 mr-2" />
+                  TikTok
+                </Button>
+              </a>
+
             </div>
           </div>
 

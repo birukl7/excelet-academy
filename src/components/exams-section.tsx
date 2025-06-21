@@ -56,12 +56,12 @@ const exams = [
   },
   {
     icon: Globe,
-    title: "SAT",
+    title: "Standardized Tests",
     description:
-      "SAT Preparation - International standardized test preparation for college admissions with comprehensive study guides, practice tests, and score improvement strategies.",
+      "TOEFL, SAT, ACT, IELTS, and Duolingo English Test – In-depth preparation materials for international standardised exams, including practice questions, scoring tips, and test-taking strategies.",
     color: "from-teal-500 to-blue-500",
     image: "/placeholder.svg?height=400&width=300",
-  },
+  }  
 ]
 
 export default function ExamsSection() {
@@ -176,11 +176,11 @@ export default function ExamsSection() {
         </div>
 
         {/* Carousel Container */}
-        <div className="relative max-w-6xl mx-auto">
+        <div className="relative max-w-7xl mx-auto">
           <div className="overflow-hidden">
             <div
               ref={trackRef}
-              className="flex transition-transform duration-500 ease-in-out md:gap-5"
+              className="flex transition-transform duration-500 ease-in-out md:gap-6 items-center"
               onTouchStart={handleTouchStart}
               onTouchMove={handleTouchMove}
               onTouchEnd={handleTouchEnd}
@@ -188,7 +188,7 @@ export default function ExamsSection() {
               {exams.map((exam, index) => (
                 <div
                   key={index}
-                  className={`carousel-item flex-shrink-0 w-full md:w-[300px] h-[350px] md:h-[300px] relative overflow-hidden rounded-2xl cursor-pointer transition-all duration-500 ease-in-out ${
+                  className={`carousel-item flex-shrink-0 w-full md:w-[300px] h-[300px] md:h-[300px] relative overflow-hidden rounded-2xl cursor-pointer transition-all duration-500 ease-in-out ${
                     index === currentIndex ? "large" : ""
                   }`}
                   onClick={() => goToSlide(index)}
@@ -211,7 +211,7 @@ export default function ExamsSection() {
                     </div>
 
                     <div className="transition-all duration-300">
-                      <p className="text-white/90 text-lg  leading-[25px] line-clamp-4">{exam.description}</p>
+                      <p className="text-white/90 text-lg  leading-[25px] line-clamp-5">{exam.description}</p>
                     </div>
                   </div>
 
@@ -223,7 +223,7 @@ export default function ExamsSection() {
           </div>
 
           {/* Navigation */}
-          <div className="flex justify-between items-center mt-8">
+          <div className="flex justify-between items-center mt-4">
             <div className="flex-1 h-1 bg-gray-200 rounded-full mr-6">
               <div
                 className="h-full bg-gradient-to-r from-purple-600 to-blue-600 rounded-full transition-all duration-500"
@@ -258,8 +258,8 @@ export default function ExamsSection() {
 
       <style jsx>{`
   .carousel-item.large {
-    width: 420px !important;
-    height: 480px !important;
+    width: 400px !important;
+    height: 360px !important;
     transform: scale(1.02);
     z-index: 10;
   }
@@ -273,7 +273,7 @@ export default function ExamsSection() {
     
     .carousel-item.large {
       width: 100% !important;
-      height: 400px !important;
+      height: 340px !important;
       transform: none !important;
       margin: 0 !important;
     }
