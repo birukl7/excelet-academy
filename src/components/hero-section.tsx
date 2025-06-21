@@ -166,43 +166,49 @@ export default function HeroSection() {
 
             <div className="flex flex-col sm:flex-row justify-center lg:justify-start items-center space-y-4 sm:space-y-0 sm:space-x-4 lg:space-x-6">
               {/* Google Play Button */}
-              <div className="relative group cursor-pointer w-full sm:w-auto">
-                <div className="absolute inset-0 bg-gradient-to-r from-green-400 to-green-600 rounded-lg blur opacity-75 group-hover:opacity-100 transition duration-300"></div>
-                <div className="relative bg-black/80 hover:bg-black border border-white/20 rounded-lg px-6 py-4 transition-all duration-300 group-hover:scale-105 backdrop-blur-sm">
-                  <div className="flex items-center space-x-3">
-                    <div className="flex-shrink-0">
-                      <div className="w-10 h-10 rounded-lg flex items-center justify-center">
-                        {/* Placeholder for Google Play icon - you can upload your own */}
-                        <Image alt="google-play-icon" src={"/google-play-brands.svg"} width={'50'} height={'50'}/>
+              <a href="https://t.me/exceletacademy" target="_blank">
+                <div className="relative group cursor-pointer w-full sm:w-auto">
+                  <div className="absolute inset-0 bg-gradient-to-r from-green-400 to-green-600 rounded-lg blur opacity-75 group-hover:opacity-100 transition duration-300"></div>
+                  <div className="relative bg-black/80 hover:bg-black border border-white/20 rounded-lg px-6 py-4 transition-all duration-300 group-hover:scale-105 backdrop-blur-sm">
+                    <div className="flex items-center space-x-3">
+                      <div className="flex-shrink-0">
+                        <div className="w-10 h-10 rounded-lg flex items-center justify-center">
+                          {/* Placeholder for Google Play icon - you can upload your own */}
+                          <Image alt="google-play-icon" src={"/google-play-brands.svg"} width={'50'} height={'50'}/>
 
+                        </div>
                       </div>
-                    </div>
-                    <div className="flex-1 text-left">
-                      <div className="text-xs text-gray-300 uppercase tracking-wide">Get it on</div>
-                      <div className="text-lg font-bold text-white leading-tight">Google Play</div>
+                      <div className="flex-1 text-left">
+                        <div className="text-xs text-gray-300 uppercase tracking-wide">Get it on</div>
+                        <div className="text-lg font-bold text-white leading-tight">Google Play</div>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
+              </a>
+
 
               {/* App Store Button */}
-              <div className="relative group cursor-pointer w-full sm:w-auto">
-                <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-blue-600 rounded-lg blur opacity-75 group-hover:opacity-100 transition duration-300"></div>
-                <div className="relative bg-black/80 hover:bg-black border border-white/20 rounded-lg px-6 py-4 transition-all duration-300 group-hover:scale-105 backdrop-blur-sm">
-                  <div className="flex items-center space-x-3">
-                    <div className="flex-shrink-0">
-                      <div className="w-10 h-10  flex items-center justify-center">
-                      <Image alt="apple-app-store-icon" src={"/app-store-brands.svg"} width={'50'} height={'50'}/>
+              <a href="https://t.me/exceletacademy" target="_blank">
+                <div className="relative group cursor-pointer w-full sm:w-auto">
+                  <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-blue-600 rounded-lg blur opacity-75 group-hover:opacity-100 transition duration-300"></div>
+                  <div className="relative bg-black/80 hover:bg-black border border-white/20 rounded-lg px-6 py-4 transition-all duration-300 group-hover:scale-105 backdrop-blur-sm">
+                    <div className="flex items-center space-x-3">
+                      <div className="flex-shrink-0">
+                        <div className="w-10 h-10  flex items-center justify-center">
+                        <Image alt="apple-app-store-icon" src={"/app-store-brands.svg"} width={'50'} height={'50'}/>
 
+                        </div>
                       </div>
-                    </div>
-                    <div className="flex-1 text-left">
-                      <div className="text-xs text-gray-300 uppercase tracking-wide">Download on the</div>
-                      <div className="text-lg font-bold text-white leading-tight">App Store</div>
+                      <div className="flex-1 text-left">
+                        <div className="text-xs text-gray-300 uppercase tracking-wide">Download on the</div>
+                        <div className="text-lg font-bold text-white leading-tight">App Store</div>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
+              </a>
+
             </div>
           </div>
 
