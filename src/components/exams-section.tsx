@@ -34,7 +34,7 @@ const exams = [
     icon: Target,
     title: "NGAT",
     description:
-      "National Grade Assessment Test - Comprehensive preparation materials for national standardized testing with practice exams and detailed performance analytics.",
+      " National Graduate Admission Test - Comprehensive preparation materials for national standardized testing with practice exams and detailed performance analytics.",
     color: "from-indigo-500 to-purple-500",
     image: "/placeholder.svg?height=400&width=300",
   },
