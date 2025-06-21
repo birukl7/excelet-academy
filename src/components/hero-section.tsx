@@ -124,7 +124,7 @@ export default function HeroSection() {
             </p>
 
             <p className="mb-5">
-              Follow Social Media Links
+              Follow Our Social Media Pages
             </p>
 
             <div className="flex flex-wrap justify-center lg:justify-start gap-3 sm:gap-4 mb-8 lg:mb-12">
