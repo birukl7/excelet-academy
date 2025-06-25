@@ -1,5 +1,3 @@
-import { Play } from "lucide-react"
-
 export default function VideoSection() {
   return (
     <section className="py-12 sm:py-16 lg:py-20 bg-gray-50">
@@ -16,14 +14,15 @@ export default function VideoSection() {
 
         <div className="max-w-4xl mx-auto">
           <div className="relative bg-gradient-to-br from-purple-600 to-blue-600 rounded-3xl p-6 lg:p-8 shadow-2xl">
-            <div className="aspect-video bg-black/20 rounded-2xl flex items-center justify-center">
-              <div className="text-center">
-                <div className="w-16 h-16 lg:w-20 lg:h-20 bg-white/20 rounded-full flex items-center justify-center mb-4 mx-auto hover:bg-white/30 transition-colors cursor-pointer">
-                  <Play className="w-6 h-6 lg:w-8 lg:h-8 text-white ml-1" />
-                </div>
-                <p className="text-white text-base lg:text-lg">YouTube Video Embed Placeholder</p>
-                <p className="text-white/80 text-sm mt-2">Click to watch our platform demo</p>
-              </div>
+            <div className="aspect-video rounded-2xl overflow-hidden">
+              <iframe
+                src="https://www.youtube.com/embed/pjFWW2aOv_g?si=FV0FkyvPPT3_7Q-F"
+                title="YouTube video player"
+                className="w-full h-full"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
+              />
             </div>
           </div>
         </div>
